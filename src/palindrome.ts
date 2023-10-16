@@ -1,6 +1,17 @@
 import inquirer from "inquirer";
 import { TextChecker } from "../type.ts";
 
+let i:number = 0
+
+const selections = await inquirer.prompt([
+    {
+        type: "list",
+        name: "selection",
+        choices: ["reverse", "loop"],
+        message: "Pick a number",
+    }
+])
+
 const answer = await inquirer.prompt([
     {
         type: "string",
@@ -9,13 +20,32 @@ const answer = await inquirer.prompt([
     }
 ])
 
-const Palindrome:TextChecker = (text:string) => {
+const ReversePalindrome:TextChecker = (text:string) => {
     const regex = /[\W_]/g
     const lowercaseRegexString = text.toLowerCase().replace(regex, '');
-    var reverseString = lowercaseRegexString.split('').reverse().join(''); 
+    const reverseString = lowercaseRegexString.split('').reverse().join(''); 
     reverseString === lowercaseRegexString ? console.log(true) : console.log(false);
 }
 
+const LoopPalindrome:TextChecker = (text:string) => {
+    const regex = /[^A-za-z0-9]/g
+    text = text.toLowerCase().replace(regex, "")
+    let len = text.length
+    for(i; i < len/2; i++){
+        if(text[i] !== text[len - 1 - i]){
+            console.log(false)
+        }
+        console.log(true)
+    }
+}
+
+const {selection} = selections
 const {text} = answer
 
-text.length !== 0 ? Palindrome(text) : console.log("Please input some text")
+if(selection === "reverse"){
+    text.length !== 0 ? ReversePalindrome(text) : console.log("Please input some text")
+    
+}
+if(selection === "loop"){
+    text.length!== 0? LoopPalindrome(text) : console.log("Please input some text")
+}
