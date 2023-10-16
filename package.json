@@ -1,0 +1,19 @@
+{
+  "name": "ts-compe-programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fizzbuzz": "ts-node-esm ./src/fizzbuzz.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/inquirer": "^9.0.4",
+    "inquirer": "^9.2.11",
+    "ts-node": "^10.9.1"
+  }
+}
