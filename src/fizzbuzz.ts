@@ -1,5 +1,5 @@
 import inquirer from "inquirer"
-import { FizzBuzz } from "../type.ts"
+import { Calculate } from "../type.ts"
 
 let i:number = 1
 let f:number = 3
@@ -13,7 +13,7 @@ const answer = await inquirer.prompt([
     }
 ])
 
-const Fizzbuzz:FizzBuzz = (length:number) => {
+const Fizzbuzz:Calculate = (length:number) => {
     for(i; i <= length; i++){
         if(i%b === 0 && i%f === 0){
             console.log("FizzBuzz")

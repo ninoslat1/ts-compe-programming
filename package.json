@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fizzbuzz": "ts-node-esm ./src/fizzbuzz.ts"
+    "fizzbuzz": "ts-node-esm ./src/fizzbuzz.ts",
+    "fibonacci": "ts-node-esm ./src/fibonacci.ts"
   },
   "keywords": [],
   "author": "",

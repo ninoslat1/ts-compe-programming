@@ -1,1 +1,1 @@
-export type FizzBuzz = (len:number) => void
+export type Calculate = (len:number) => void
