@@ -20,14 +20,14 @@ const answer = await inquirer.prompt([
     }
 ])
 
-const ReversePalindrome:TextChecker = (text:string) => {
+const ReversePalindrome:TextChecker = (text) => {
     const regex = /[\W_]/g
     const lowercaseRegexString = text.toLowerCase().replace(regex, '');
     const reverseString = lowercaseRegexString.split('').reverse().join(''); 
     reverseString === lowercaseRegexString ? console.log(true) : console.log(false);
 }
 
-const LoopPalindrome:TextChecker = (text:string) => {
+const LoopPalindrome:TextChecker = (text) => {
     const regex = /[^A-za-z0-9]/g
     text = text.toLowerCase().replace(regex, "")
     let len = text.length

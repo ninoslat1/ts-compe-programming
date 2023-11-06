@@ -13,7 +13,7 @@ const answer = await inquirer.prompt([
     }
 ])
 
-const Fizzbuzz:Calculate = (length:number) => {
+const Fizzbuzz:Calculate = (length) => {
     for(i; i <= length; i++){
         if(i%b === 0 && i%f === 0){
             console.log("FizzBuzz")

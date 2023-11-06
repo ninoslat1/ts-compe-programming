@@ -15,7 +15,7 @@ const answer = await inquirer.prompt([
     }
 ])
 
-const Fibonacci:Calculate = (length:number) => {
+const Fibonacci:Calculate = (length) => {
     list.push(x)
     list.push(y)
 
